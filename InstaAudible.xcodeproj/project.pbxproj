@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9974A2D21A3CEE9700C8BE03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974A2D11A3CEE9700C8BE03 /* main.m */; };
+		9974A2D51A3CEE9700C8BE03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974A2D41A3CEE9700C8BE03 /* AppDelegate.m */; };
+		9974A2D81A3CEE9700C8BE03 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974A2D71A3CEE9700C8BE03 /* ViewController.m */; };
+		9974A2DB1A3CEE9700C8BE03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9974A2D91A3CEE9700C8BE03 /* Main.storyboard */; };
+		9974A2DD1A3CEE9700C8BE03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9974A2DC1A3CEE9700C8BE03 /* Images.xcassets */; };
+		9974A2E01A3CEE9700C8BE03 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9974A2DE1A3CEE9700C8BE03 /* LaunchScreen.xib */; };
+		9974A2EC1A3CEE9700C8BE03 /* InstaAudibleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974A2EB1A3CEE9700C8BE03 /* InstaAudibleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9974A2E61A3CEE9700C8BE03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9974A2C41A3CEE9700C8BE03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9974A2CB1A3CEE9700C8BE03;
+			remoteInfo = InstaAudible;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9974A2CC1A3CEE9700C8BE03 /* InstaAudible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaAudible.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9974A2D01A3CEE9700C8BE03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9974A2D11A3CEE9700C8BE03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9974A2D31A3CEE9700C8BE03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9974A2D41A3CEE9700C8BE03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9974A2D61A3CEE9700C8BE03 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9974A2D71A3CEE9700C8BE03 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9974A2DA1A3CEE9700C8BE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9974A2DC1A3CEE9700C8BE03 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9974A2DF1A3CEE9700C8BE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		9974A2E51A3CEE9700C8BE03 /* InstaAudibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaAudibleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9974A2EA1A3CEE9700C8BE03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9974A2EB1A3CEE9700C8BE03 /* InstaAudibleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstaAudibleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9974A2C91A3CEE9700C8BE03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9974A2E21A3CEE9700C8BE03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9974A2C31A3CEE9700C8BE03 = {
+			isa = PBXGroup;
+			children = (
+				9974A2CE1A3CEE9700C8BE03 /* InstaAudible */,
+				9974A2E81A3CEE9700C8BE03 /* InstaAudibleTests */,
+				9974A2CD1A3CEE9700C8BE03 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9974A2CD1A3CEE9700C8BE03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9974A2CC1A3CEE9700C8BE03 /* InstaAudible.app */,
+				9974A2E51A3CEE9700C8BE03 /* InstaAudibleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9974A2CE1A3CEE9700C8BE03 /* InstaAudible */ = {
+			isa = PBXGroup;
+			children = (
+				9974A2D31A3CEE9700C8BE03 /* AppDelegate.h */,
+				9974A2D41A3CEE9700C8BE03 /* AppDelegate.m */,
+				9974A2D61A3CEE9700C8BE03 /* ViewController.h */,
+				9974A2D71A3CEE9700C8BE03 /* ViewController.m */,
+				9974A2D91A3CEE9700C8BE03 /* Main.storyboard */,
+				9974A2DC1A3CEE9700C8BE03 /* Images.xcassets */,
+				9974A2DE1A3CEE9700C8BE03 /* LaunchScreen.xib */,
+				9974A2CF1A3CEE9700C8BE03 /* Supporting Files */,
+			);
+			path = InstaAudible;
+			sourceTree = "<group>";
+		};
+		9974A2CF1A3CEE9700C8BE03 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9974A2D01A3CEE9700C8BE03 /* Info.plist */,
+				9974A2D11A3CEE9700C8BE03 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9974A2E81A3CEE9700C8BE03 /* InstaAudibleTests */ = {
+			isa = PBXGroup;
+			children = (
+				9974A2EB1A3CEE9700C8BE03 /* InstaAudibleTests.m */,
+				9974A2E91A3CEE9700C8BE03 /* Supporting Files */,
+			);
+			path = InstaAudibleTests;
+			sourceTree = "<group>";
+		};
+		9974A2E91A3CEE9700C8BE03 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9974A2EA1A3CEE9700C8BE03 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9974A2CB1A3CEE9700C8BE03 /* InstaAudible */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9974A2EF1A3CEE9700C8BE03 /* Build configuration list for PBXNativeTarget "InstaAudible" */;
+			buildPhases = (
+				9974A2C81A3CEE9700C8BE03 /* Sources */,
+				9974A2C91A3CEE9700C8BE03 /* Frameworks */,
+				9974A2CA1A3CEE9700C8BE03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstaAudible;
+			productName = InstaAudible;
+			productReference = 9974A2CC1A3CEE9700C8BE03 /* InstaAudible.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9974A2E41A3CEE9700C8BE03 /* InstaAudibleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9974A2F21A3CEE9700C8BE03 /* Build configuration list for PBXNativeTarget "InstaAudibleTests" */;
+			buildPhases = (
+				9974A2E11A3CEE9700C8BE03 /* Sources */,
+				9974A2E21A3CEE9700C8BE03 /* Frameworks */,
+				9974A2E31A3CEE9700C8BE03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9974A2E71A3CEE9700C8BE03 /* PBXTargetDependency */,
+			);
+			name = InstaAudibleTests;
+			productName = InstaAudibleTests;
+			productReference = 9974A2E51A3CEE9700C8BE03 /* InstaAudibleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9974A2C41A3CEE9700C8BE03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Edgar Ramirez";
+				TargetAttributes = {
+					9974A2CB1A3CEE9700C8BE03 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					9974A2E41A3CEE9700C8BE03 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 9974A2CB1A3CEE9700C8BE03;
+					};
+				};
+			};
+			buildConfigurationList = 9974A2C71A3CEE9700C8BE03 /* Build configuration list for PBXProject "InstaAudible" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9974A2C31A3CEE9700C8BE03;
+			productRefGroup = 9974A2CD1A3CEE9700C8BE03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9974A2CB1A3CEE9700C8BE03 /* InstaAudible */,
+				9974A2E41A3CEE9700C8BE03 /* InstaAudibleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9974A2CA1A3CEE9700C8BE03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9974A2DB1A3CEE9700C8BE03 /* Main.storyboard in Resources */,
+				9974A2E01A3CEE9700C8BE03 /* LaunchScreen.xib in Resources */,
+				9974A2DD1A3CEE9700C8BE03 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9974A2E31A3CEE9700C8BE03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9974A2C81A3CEE9700C8BE03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9974A2D81A3CEE9700C8BE03 /* ViewController.m in Sources */,
+				9974A2D51A3CEE9700C8BE03 /* AppDelegate.m in Sources */,
+				9974A2D21A3CEE9700C8BE03 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9974A2E11A3CEE9700C8BE03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9974A2EC1A3CEE9700C8BE03 /* InstaAudibleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9974A2E71A3CEE9700C8BE03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9974A2CB1A3CEE9700C8BE03 /* InstaAudible */;
+			targetProxy = 9974A2E61A3CEE9700C8BE03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9974A2D91A3CEE9700C8BE03 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9974A2DA1A3CEE9700C8BE03 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9974A2DE1A3CEE9700C8BE03 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9974A2DF1A3CEE9700C8BE03 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9974A2ED1A3CEE9700C8BE03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9974A2EE1A3CEE9700C8BE03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9974A2F01A3CEE9700C8BE03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InstaAudible/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9974A2F11A3CEE9700C8BE03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InstaAudible/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9974A2F31A3CEE9700C8BE03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = InstaAudibleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstaAudible.app/InstaAudible";
+			};
+			name = Debug;
+		};
+		9974A2F41A3CEE9700C8BE03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = InstaAudibleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstaAudible.app/InstaAudible";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9974A2C71A3CEE9700C8BE03 /* Build configuration list for PBXProject "InstaAudible" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9974A2ED1A3CEE9700C8BE03 /* Debug */,
+				9974A2EE1A3CEE9700C8BE03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9974A2EF1A3CEE9700C8BE03 /* Build configuration list for PBXNativeTarget "InstaAudible" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9974A2F01A3CEE9700C8BE03 /* Debug */,
+				9974A2F11A3CEE9700C8BE03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9974A2F21A3CEE9700C8BE03 /* Build configuration list for PBXNativeTarget "InstaAudibleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9974A2F31A3CEE9700C8BE03 /* Debug */,
+				9974A2F41A3CEE9700C8BE03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9974A2C41A3CEE9700C8BE03 /* Project object */;
+}
