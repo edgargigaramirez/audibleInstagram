@@ -14,6 +14,8 @@
 		9974A2DD1A3CEE9700C8BE03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9974A2DC1A3CEE9700C8BE03 /* Images.xcassets */; };
 		9974A2E01A3CEE9700C8BE03 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9974A2DE1A3CEE9700C8BE03 /* LaunchScreen.xib */; };
 		9974A2EC1A3CEE9700C8BE03 /* InstaAudibleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974A2EB1A3CEE9700C8BE03 /* InstaAudibleTests.m */; };
+		9974A2F81A3CEF1000C8BE03 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974A2F71A3CEF1000C8BE03 /* Media.m */; };
+		9974A2F91A3CEF1000C8BE03 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974A2F71A3CEF1000C8BE03 /* Media.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		9974A2E51A3CEE9700C8BE03 /* InstaAudibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaAudibleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9974A2EA1A3CEE9700C8BE03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9974A2EB1A3CEE9700C8BE03 /* InstaAudibleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstaAudibleTests.m; sourceTree = "<group>"; };
+		9974A2F61A3CEF1000C8BE03 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
+		9974A2F71A3CEF1000C8BE03 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		9974A2CE1A3CEE9700C8BE03 /* InstaAudible */ = {
 			isa = PBXGroup;
 			children = (
+				9974A2F51A3CEF1000C8BE03 /* Model */,
 				9974A2D31A3CEE9700C8BE03 /* AppDelegate.h */,
 				9974A2D41A3CEE9700C8BE03 /* AppDelegate.m */,
 				9974A2D61A3CEE9700C8BE03 /* ViewController.h */,
@@ -117,6 +122,15 @@
 				9974A2EA1A3CEE9700C8BE03 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9974A2F51A3CEF1000C8BE03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9974A2F61A3CEF1000C8BE03 /* Media.h */,
+				9974A2F71A3CEF1000C8BE03 /* Media.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +235,7 @@
 			files = (
 				9974A2D81A3CEE9700C8BE03 /* ViewController.m in Sources */,
 				9974A2D51A3CEE9700C8BE03 /* AppDelegate.m in Sources */,
+				9974A2F81A3CEF1000C8BE03 /* Media.m in Sources */,
 				9974A2D21A3CEE9700C8BE03 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9974A2F91A3CEF1000C8BE03 /* Media.m in Sources */,
 				9974A2EC1A3CEE9700C8BE03 /* InstaAudibleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

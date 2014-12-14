@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIScrollView* gridScrollView;
+@property (strong, nonatomic) NSArray* images;
+@property (strong, nonatomic) NSMutableArray* thumbnails;
+
 
 @end
 
