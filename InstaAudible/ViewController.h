@@ -6,14 +6,13 @@
 //  Copyright (c) 2014 Edgar Ramirez. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
-@interface ViewController : UIViewController
+@interface ViewController : UICollectionViewController
+@property (strong, nonatomic) NSArray *images;
+@property NSUInteger imagesToBeLoadedCount;
 
-@property (weak, nonatomic) IBOutlet UIScrollView* gridScrollView;
-@property (strong, nonatomic) NSArray* images;
-@property (strong, nonatomic) NSMutableArray* thumbnails;
-
+-(IBAction)refreshContent:(id)sender;
 
 @end
 
