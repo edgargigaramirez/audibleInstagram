@@ -16,6 +16,14 @@
 		9974A2EC1A3CEE9700C8BE03 /* InstaAudibleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974A2EB1A3CEE9700C8BE03 /* InstaAudibleTests.m */; };
 		9974A2F81A3CEF1000C8BE03 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974A2F71A3CEF1000C8BE03 /* Media.m */; };
 		9974A2F91A3CEF1000C8BE03 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974A2F71A3CEF1000C8BE03 /* Media.m */; };
+		9974A3031A3E10E800C8BE03 /* UICollectionViewCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974A3021A3E10E800C8BE03 /* UICollectionViewCustomCell.m */; };
+		9974A3041A3E10E800C8BE03 /* UICollectionViewCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974A3021A3E10E800C8BE03 /* UICollectionViewCustomCell.m */; };
+		9974A3061A3E387100C8BE03 /* Slate.png in Resources */ = {isa = PBXBuildFile; fileRef = 9974A3051A3E387100C8BE03 /* Slate.png */; };
+		9974A3071A3E387100C8BE03 /* Slate.png in Resources */ = {isa = PBXBuildFile; fileRef = 9974A3051A3E387100C8BE03 /* Slate.png */; };
+		9974A30D1A3E3C1100C8BE03 /* FullscreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974A30C1A3E3C1100C8BE03 /* FullscreenViewController.m */; };
+		9974A30E1A3E3C1100C8BE03 /* FullscreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974A30C1A3E3C1100C8BE03 /* FullscreenViewController.m */; };
+		9974A3131A3E8BA100C8BE03 /* AFCollectionViewFlowLargeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974A3101A3E8BA100C8BE03 /* AFCollectionViewFlowLargeLayout.m */; };
+		9974A3141A3E8BA100C8BE03 /* AFCollectionViewFlowSmallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974A3121A3E8BA100C8BE03 /* AFCollectionViewFlowSmallLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,15 @@
 		9974A2EB1A3CEE9700C8BE03 /* InstaAudibleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstaAudibleTests.m; sourceTree = "<group>"; };
 		9974A2F61A3CEF1000C8BE03 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
 		9974A2F71A3CEF1000C8BE03 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
+		9974A3011A3E10C900C8BE03 /* UICollectionViewCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewCustomCell.h; sourceTree = "<group>"; };
+		9974A3021A3E10E800C8BE03 /* UICollectionViewCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewCustomCell.m; sourceTree = "<group>"; };
+		9974A3051A3E387100C8BE03 /* Slate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slate.png; sourceTree = "<group>"; };
+		9974A30B1A3E3BD200C8BE03 /* FullscreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullscreenViewController.h; sourceTree = "<group>"; };
+		9974A30C1A3E3C1100C8BE03 /* FullscreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullscreenViewController.m; sourceTree = "<group>"; };
+		9974A30F1A3E8BA100C8BE03 /* AFCollectionViewFlowLargeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCollectionViewFlowLargeLayout.h; sourceTree = "<group>"; };
+		9974A3101A3E8BA100C8BE03 /* AFCollectionViewFlowLargeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFCollectionViewFlowLargeLayout.m; sourceTree = "<group>"; };
+		9974A3111A3E8BA100C8BE03 /* AFCollectionViewFlowSmallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCollectionViewFlowSmallLayout.h; sourceTree = "<group>"; };
+		9974A3121A3E8BA100C8BE03 /* AFCollectionViewFlowSmallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFCollectionViewFlowSmallLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,15 +102,24 @@
 		9974A2CE1A3CEE9700C8BE03 /* InstaAudible */ = {
 			isa = PBXGroup;
 			children = (
+				9974A30F1A3E8BA100C8BE03 /* AFCollectionViewFlowLargeLayout.h */,
+				9974A3101A3E8BA100C8BE03 /* AFCollectionViewFlowLargeLayout.m */,
+				9974A3111A3E8BA100C8BE03 /* AFCollectionViewFlowSmallLayout.h */,
+				9974A3121A3E8BA100C8BE03 /* AFCollectionViewFlowSmallLayout.m */,
+				9974A3051A3E387100C8BE03 /* Slate.png */,
 				9974A2F51A3CEF1000C8BE03 /* Model */,
 				9974A2D31A3CEE9700C8BE03 /* AppDelegate.h */,
 				9974A2D41A3CEE9700C8BE03 /* AppDelegate.m */,
+				9974A30B1A3E3BD200C8BE03 /* FullscreenViewController.h */,
+				9974A30C1A3E3C1100C8BE03 /* FullscreenViewController.m */,
 				9974A2D61A3CEE9700C8BE03 /* ViewController.h */,
 				9974A2D71A3CEE9700C8BE03 /* ViewController.m */,
 				9974A2D91A3CEE9700C8BE03 /* Main.storyboard */,
 				9974A2DC1A3CEE9700C8BE03 /* Images.xcassets */,
 				9974A2DE1A3CEE9700C8BE03 /* LaunchScreen.xib */,
 				9974A2CF1A3CEE9700C8BE03 /* Supporting Files */,
+				9974A3011A3E10C900C8BE03 /* UICollectionViewCustomCell.h */,
+				9974A3021A3E10E800C8BE03 /* UICollectionViewCustomCell.m */,
 			);
 			path = InstaAudible;
 			sourceTree = "<group>";
@@ -214,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9974A2DB1A3CEE9700C8BE03 /* Main.storyboard in Resources */,
+				9974A3061A3E387100C8BE03 /* Slate.png in Resources */,
 				9974A2E01A3CEE9700C8BE03 /* LaunchScreen.xib in Resources */,
 				9974A2DD1A3CEE9700C8BE03 /* Images.xcassets in Resources */,
 			);
@@ -223,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9974A3071A3E387100C8BE03 /* Slate.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,9 +262,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9974A2D81A3CEE9700C8BE03 /* ViewController.m in Sources */,
+				9974A3131A3E8BA100C8BE03 /* AFCollectionViewFlowLargeLayout.m in Sources */,
+				9974A30D1A3E3C1100C8BE03 /* FullscreenViewController.m in Sources */,
+				9974A3141A3E8BA100C8BE03 /* AFCollectionViewFlowSmallLayout.m in Sources */,
 				9974A2D51A3CEE9700C8BE03 /* AppDelegate.m in Sources */,
 				9974A2F81A3CEF1000C8BE03 /* Media.m in Sources */,
 				9974A2D21A3CEE9700C8BE03 /* main.m in Sources */,
+				9974A3031A3E10E800C8BE03 /* UICollectionViewCustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9974A2F91A3CEF1000C8BE03 /* Media.m in Sources */,
+				9974A3041A3E10E800C8BE03 /* UICollectionViewCustomCell.m in Sources */,
 				9974A2EC1A3CEE9700C8BE03 /* InstaAudibleTests.m in Sources */,
+				9974A30E1A3E3C1100C8BE03 /* FullscreenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

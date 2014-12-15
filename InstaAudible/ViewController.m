@@ -8,25 +8,52 @@
 
 #import "ViewController.h"
 #import "Media.h"
+#import "UICollectionViewCustomCell.h"
+#import "FullscreenViewController.h"
+
+#import "AFCollectionViewFlowLargeLayout.h"
+#import "AFCollectionViewFlowSmallLayout.h"
 
 @interface ViewController ()
+@property CGRect previousPreheatRect;
 
+@property (nonatomic, strong) AFCollectionViewFlowLargeLayout *largeLayout;
+@property (nonatomic, strong) AFCollectionViewFlowSmallLayout *smallLayout;
 @end
 
 @implementation ViewController
 
-NSString * const kInstagramBaseURLString = @"https://api.instagram.com/v1/media/popular?client_id=41b73dd596144547a01e5e43aae31c4e";
-const NSInteger kthumbnailWidth = 80;
-const NSInteger kthumbnailHeight = 80;
-const NSInteger kImagesPerRow = 4;
+static NSString * const CellReuseIdentifier = @"Cell";
+
+NSString * const client_id = @"client_id=41b73dd596144547a01e5e43aae31c4e";
+NSString * const kInstagramBaseURLString = @"https://api.instagram.com/v1/media/popular?%@&count=100";
+NSString * const kInstagramBaseUrlStringForUser = @"https://api.instagram.com/v1/users/25025320/media/recent/?%@&count=100";
+NSString * const kInstagramBaseUrlStringForTag = @"https://api.instagram.com/v1/tags/%@/media/recent/?%@&count=100";
+
+NSString * const TAG_SELFIE = @"selfie";
+bool JSON_IS_READY = NO;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.smallLayout = [[AFCollectionViewFlowSmallLayout alloc] init];
+    self.largeLayout = [[AFCollectionViewFlowLargeLayout alloc] init];
+    
+    [self.collectionView setCollectionViewLayout:self.smallLayout animated:YES];
+    
+    self.title = [NSString stringWithFormat:@"#%@", TAG_SELFIE];
     // Do any additional setup after loading the view, typically from a nib.
+        
+    [self refreshContent:nil];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self configureView];
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,39 +61,61 @@ const NSInteger kImagesPerRow = 4;
     // Dispose of any resources that can be recreated.
 }
 
-- (void)configureView {
-    // Update the user interface for the detail item.
-    self.gridScrollView.contentSize = self.view.bounds.size;
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    NSInteger count = JSON_IS_READY ? self.images.count : self.imagesToBeLoadedCount;
     
-    self.thumbnails = [[NSMutableArray alloc] init];
+    NSLog(@"Refresing the collection view.. %ld", (long)count);
     
-    [self getUserMediaWithId:nil withAccessToken:nil block:^(NSArray *records) {
-        self.images = records;
-        [self loadImages];
-    }];
+    return count;
 }
 
-#pragma mark - custom
-
-- (void) loadImages {
-    int item = 0;
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCustomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellReuseIdentifier forIndexPath:indexPath];
     
-    for (Media* media in self.images) {
+    // Increment the cell's tag
+    NSInteger currentTag = cell.tag + 1;
+    cell.tag = currentTag;
+    
+    if (JSON_IS_READY) {
+        Media *media = self.images[indexPath.item];
+        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^ {
             NSString* thumbnailUrl = media.thumbnailUrl;
             NSData* data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:thumbnailUrl]];
             UIImage* image = [UIImage imageWithData:data];
-            NSLog(@"Loading...%@", thumbnailUrl);
+//            NSLog(@"Loading...%@", thumbnailUrl);
             dispatch_async(dispatch_get_main_queue(), ^ {
-                UIButton* button = [self.thumbnails objectAtIndex:item];
-                [button setImage:image forState:UIControlStateNormal];
+                NSLog(@"Loading...%@ - END", thumbnailUrl);
+                // Only update the thumbnail if the cell tag hasn't changed. Otherwise, the cell has been re-used.
+                if (cell.tag == currentTag) {
+                    [cell setImage:image];
+                }
             });
         });
-        ++item;
+    } else {
+        // Only update the thumbnail if the cell tag hasn't changed. Otherwise, the cell has been re-used.
+        if (cell.tag == currentTag) {
+            NSString* thumbnailUrl = @"Slate.png";
+            UIImage* image = [UIImage imageNamed:thumbnailUrl];
+            [cell setImage:image];
+        }
     }
-}
-- (void)buttonAction:(id)sender {
     
+    return cell;
+}
+
+#pragma mark - Prepare for Segue
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UICollectionViewCell *cell = (UICollectionViewCell *)sender;
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+    
+    FullscreenViewController *imageDetailViewController = (FullscreenViewController *)segue.destinationViewController;
+    imageDetailViewController.imageName = ((Media*)[self.images objectAtIndex:indexPath.row]).standardUrl;
 }
 
 #pragma mark - Instagram API
@@ -75,8 +124,11 @@ const NSInteger kImagesPerRow = 4;
            withAccessToken:(NSString *)accessToken
                      block:(void (^)(NSArray *records))block
 {
+    NSString *endPointString = [NSString stringWithFormat:kInstagramBaseUrlStringForTag, TAG_SELFIE, client_id];
+    NSLog(@"Fetching %@", endPointString);
+
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:kInstagramBaseURLString]];
+    [request setURL:[NSURL URLWithString:endPointString]];
     [request setHTTPMethod:@"GET"];
     NSString *contentType = [NSString stringWithFormat:@"application/json"];
     [request addValue:contentType forHTTPHeaderField: @"Content-Type"];
@@ -90,36 +142,59 @@ const NSInteger kImagesPerRow = 4;
                                                      returningResponse:&response
                                                                  error:&error];
         NSError *jsonError = nil;
-        NSDictionary *res = [NSJSONSerialization JSONObjectWithData:receivedData options:NSJSONReadingMutableLeaves error:&jsonError];
-        NSMutableArray *mutableRecords = [NSMutableArray array];
-        NSArray* data = [res objectForKey:@"data"];
-        for (NSDictionary* obj in data) {
-            Media *theMedia = [[Media alloc] initWithAttributes:obj];
-            [mutableRecords addObject:theMedia];
-        }
-        int item = 0, row = 0, col = 0;
-        for (NSDictionary* image in mutableRecords) {
-            UIButton* button = [[UIButton alloc] initWithFrame:CGRectMake(col*kthumbnailWidth,
-                                                                          row*kthumbnailHeight,
-                                                                          kthumbnailWidth,
-                                                                          kthumbnailHeight)];
-            button.tag = item;
-            [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
-            ++col;++item;
-            if (col >= kImagesPerRow) {
-                row++;
-                col = 0;
-            }
-            [self.gridScrollView addSubview:button];
-            [self.thumbnails addObject:button];
-        }
-        NSLog(@"Number of photos about to be display...");
         
-        if (block) {
-            block([NSArray arrayWithArray:mutableRecords]);
+        if (error == nil && jsonError == nil) {
+            NSDictionary *res = [NSJSONSerialization JSONObjectWithData:receivedData options:NSJSONReadingMutableLeaves error:&jsonError];
+            NSMutableArray *mutableRecords = [NSMutableArray array];
+            NSArray* data = [res objectForKey:@"data"];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //tasks on main thread
+                // tell the collection view to render the placeholders
+                self.imagesToBeLoadedCount = (unsigned long)data.count;
+                NSLog(@"Number of placeholders to show: %lu", self.imagesToBeLoadedCount);
+                [self.collectionView reloadData];
+            });
+            
+            for (NSDictionary* obj in data) {
+                Media *theMedia = [[Media alloc] initWithAttributes:obj];
+                [mutableRecords addObject:theMedia];
+            }
+            
+            JSON_IS_READY = (mutableRecords.count > 0);
+            NSLog(@"Number of photos fetch: %lu", mutableRecords.count);
+            
+            if (block) {
+                block([NSArray arrayWithArray:mutableRecords]);
+            }
+        } else
+        {
+            NSLog(@"An error has occurred.");
+            
         }
     });
     
+}
+
+# pragma mark - custom
+-(IBAction)refreshContent:(id)sender {
+    [self getUserMediaWithId:nil withAccessToken:nil block:^(NSArray *records) {
+        self.images = records;
+        [self.collectionView reloadData];
+    }];
+}
+
+-(IBAction)toggleTileSizes:(id)sender {
+    if (self.collectionView.collectionViewLayout == self.smallLayout)
+    {
+        [self.largeLayout invalidateLayout];
+        [self.collectionView setCollectionViewLayout:self.largeLayout animated:YES];
+    }
+    else
+    {
+        [self.smallLayout invalidateLayout];
+        [self.collectionView setCollectionViewLayout:self.smallLayout animated:YES];
+    }
 }
 
 @end
