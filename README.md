@@ -1,4 +1,4 @@
-audibleInstagram
+Fetch media from Instagraman API
 ================
 
 Personal Projects
