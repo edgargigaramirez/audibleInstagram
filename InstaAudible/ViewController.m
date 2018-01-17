@@ -180,7 +180,9 @@ bool JSON_IS_READY = NO;
 -(IBAction)refreshContent:(id)sender {
     [self getUserMediaWithId:nil withAccessToken:nil block:^(NSArray *records) {
         self.images = records;
-        [self.collectionView reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.collectionView reloadData];
+        });
     }];
 }
 
